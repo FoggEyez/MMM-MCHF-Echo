@@ -1,0 +1,3 @@
+{
+ "name":"mmm-mchf-echo","version":"0.1.0","description":"A responsive observatory music card with honest Spotify playback progress and an optional existing-player bridge.","license":"MIT","author":"FoggEyez","keywords":["magicmirror","magicmirror-module","mischief","spotify","music"],"repository":{"type":"git","url":"https://github.com/FoggEyez/MMM-MCHF-Echo.git"},"homepage":"https://github.com/FoggEyez/MMM-MCHF-Echo#readme","bugs":{"url":"https://github.com/FoggEyez/MMM-MCHF-Echo/issues"},"engines":{"node":">=22"},"scripts":{"test":"node --test test/*.test.cjs"}
+}
