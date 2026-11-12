@@ -7,3 +7,5 @@ Echo's JavaScript, CSS and documentation are original Mirror Mischief code under
 Optional interoperability: https://github.com/Fabrizz/MMM-OnSpotify, by Fabrizz and contributors (MIT). Echo reads the active module's public frontend metadata; no upstream source is included or renamed. Spotify and MMM-OnSpotify remain separately maintained products. No affiliation or endorsement is claimed.
 
 Album artwork and metadata are supplied by Spotify/the owner's selected provider, remain the property of their respective rights holders, and are not distributed with this source. The progress arc is an original informational data visualization; no audio is obtained or analyzed.
+
+The optional local studio sample cover is the existing Mirror Mischief mascot artwork, supplied by the project owner. It illustrates fictional sample playback, not a Spotify release. It is never substituted for real provider artwork.
