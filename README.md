@@ -8,13 +8,11 @@ Part of [Mirror Mischief](https://github.com/FoggEyez/Mirror-Mischief). Meaning:
 
 ## Install
 
-This first version is being reviewed locally. Until its public repository is published, copy the complete `MMM-MCHF-Echo` folder into your MagicMirror `modules` directory, then run `npm ci --ignore-scripts` there. The clone commands below are for the intended published repository; its URL is not a claim that publication is complete.
+Public preview 0.1.1. Install it with ordinary MagicMirror² configuration; no companion is required.
 
 ```sh
 cd ~/MagicMirror/modules
 git clone https://github.com/FoggEyez/MMM-MCHF-Echo.git
-cd MMM-MCHF-Echo
-npm ci --ignore-scripts
 ```
 
 No runtime packages, build step or companion subscription is required. The repository/folder/entry name is `MMM-MCHF-Echo`.
@@ -90,7 +88,7 @@ The same literal defaults are available in ordinary `config.js` and in compatibl
 | `idleBehavior` | `"retain"` | `retain` last track, `collapse` to a short Plaque, `plaque` at configured height, or `hide`. |
 | `motion` | `"gentle"` | `gentle` enables restrained ornament; `none` or `still` stops motion. OS reduced-motion preference is respected. |
 | `entrance` | `"fade"` | `fade`, `flip`, or `none` for metadata on first render; artwork stays static. |
-| `transitionStyle` | `"fade"` | `fade` text transition, or `none`. Artwork is never animated. |
+| `transitionStyle` | `"fade"` | `fade` text transition, or `none`. Track changes keep artwork static; stale playback fades it out. |
 | `transitionMs` | `500` | Text transition duration, bounded to 100–1400ms. |
 | `ornament` | `true` | Subtle brass-label glint while genuinely playing; no fake audio spectrum. |
 | `staleSeconds` | `90` | Freshness window, bounded to 15–3600 seconds. Progress freezes and the card marks overdue data. |
@@ -145,3 +143,9 @@ Update with `git pull` and `npm ci --ignore-scripts`, then restart MagicMirror. 
 Floating surfaces have no enclosing panel or artwork surround. Earthy background colors apply when you choose `surface: "framed"`. The glow is a separate colored light layer: original album artwork stays intact and is never blurred or recolored. Palette reuse reads CSS colors already published by OnSpotify; it adds no image processing or API requests. Reduced motion keeps the light steady.
 
 Optional native classes and the companion Visual style control are described in [APPEARANCE.md](APPEARANCE.md). Floating surfaces stay clear; choose Framed for a background.
+
+## In a mirror composition
+
+![Actual Hora dial, Gothic Flip and Echo renderers with fictional sample playback](preview/Hora-Echo.png)
+
+Working frontend renders with sample music and project-owned demonstration artwork. The date sits above both clocks; the outer surrounds are transparent.
