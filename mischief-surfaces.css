@@ -1,0 +1,28 @@
+/* Mirror Mischief earthy card surfaces. Standard MagicMirror classes; no script required. */
+.mischief-earth-moss{--mischief-earth-bg:#1e3025;--mischief-earth-line:#52654d}
+.mischief-earth-sage{--mischief-earth-bg:#2b3930;--mischief-earth-line:#71816b}
+.mischief-earth-clay{--mischief-earth-bg:#3c2c26;--mischief-earth-line:#80614f}
+.mischief-earth-sand{--mischief-earth-bg:#393327;--mischief-earth-line:#82795a}
+.mischief-earth-walnut{--mischief-earth-bg:#30271f;--mischief-earth-line:#6d5741}
+.mischief-earth-slate{--mischief-earth-bg:#273236;--mischief-earth-line:#607577}
+.mischief-earth-peat{--mischief-earth-bg:#24241f;--mischief-earth-line:#62634e}
+.module[class*="mischief-earth-"]:not(.MMM-MCHF-Rite):not(.MMM-MCHF-Atmos):not(.MMM-MCHF-Astra) .module-content{background:var(--mischief-earth-bg);border:1px solid var(--mischief-earth-line);border-radius:14px;padding:14px 16px;box-sizing:border-box;box-shadow:0 8px 24px #0003;color:#e9e6dc}
+.module[class*="mischief-earth-"]:not(.MMM-MCHF-Rite):not(.MMM-MCHF-Atmos):not(.MMM-MCHF-Astra) .module-content>:is(section,div):not(.mischief-scene-overlay):not(.mischief-atmos){background:var(--mischief-earth-bg)!important;border-color:var(--mischief-earth-line)!important;color:#e9e6dc}
+@media(prefers-reduced-motion:reduce){.animate__animated{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important}}
+/* Optional native module class: subtle gothic materials, without changing data/layout. */
+.module.mischief-gothic{--mischief-gothic-bronze:#776448;--mischief-gothic-gold:#d6c49f;--mischief-gothic-glass:radial-gradient(ellipse at 100% 0,rgba(150,116,58,.09),transparent 65%),linear-gradient(135deg,rgba(25,33,27,.94),rgba(9,16,13,.94))}
+.module.mischief-gothic:is(.mirror-local-weather,.mirror-local-calendar),
+.module.mischief-gothic :is(.hc-card,.lc-card,.sw-panel,.econ-band){background:var(--mischief-gothic-glass);border-color:var(--mischief-gothic-bronze);border-radius:12px 4px 12px 4px;box-shadow:inset 0 1px 0 #e2cc9a1c,inset 0 0 0 3px #0b100d66,0 6px 20px #0003}
+.module.mischief-gothic :is(.sw-panel,.econ-band){border-radius:7px 2px 7px 2px}
+.module.mischief-gothic>header,.module.mischief-gothic:is(.weather,.calendar)>header,
+.module.mischief-gothic :is(.hc-heading,.lc-heading,.sw-brand,.econ-label,.mm-moon-title,.mischief-quote-label){font-family:Georgia,'Times New Roman',serif;color:var(--mischief-gothic-gold);border-color:#77644880}
+.module.mischief-gothic :is(.hc-bandwidth,.sw-header,.econ-label){border-color:#77644880}
+.module.mischief-gothic :is(.sw-eyebrow,.hc-source,.lc-credit,.mirror-weather-credit){color:#acaa95}
+.module.mischief-gothic .mm-moon-phase{font-family:Georgia,'Times New Roman',serif;color:#e2d5b8;border-color:#8d7956;background:linear-gradient(135deg,#20251de6,#0e1511e6);box-shadow:inset 0 1px 0 #e2cc9a1c}
+.module.mischief-gothic .mischief-quote{color:#ddd5c2}
+.module.mischief-gothic.clock .date{font-family:Georgia,'Times New Roman',serif;color:#cbb995}
+.module.mischief-gothic.clock .time{color:#f0e8d7}
+/* Other ordinary modules get a fine bronze edge; full-screen scenes stay transparent. */
+.module.mischief-gothic:not(:is(.weather,.calendar,.clock,.MMM-HomeCheck,.MMM-LocalConditions,.MMM-SystemWatch,.MMM-EconomyTicker,.MMM-MischiefMoon,.MMM-MischiefQuotes,.MMM-QuietSky,.MMM-MCHF-Haven,.MMM-MCHF-Air,.MMM-MCHF-Vigil,.MMM-MCHF-Tide,.MMM-MCHF-Luna,.MMM-MCHF-Wit,.MMM-MCHF-Rite,.MMM-MCHF-Atmos,.MMM-MCHF-Astra,.MMM-MCHF-Flow))>.module-content{border-radius:10px;box-shadow:0 0 0 1px #77644870}
+/* Gothic and background presets compose while preserving the chosen background. */
+.module.mischief-gothic[class*="mischief-earth-"]:not(.MMM-MCHF-Rite):not(.MMM-MCHF-Atmos):not(.MMM-MCHF-Astra) .module-content{border-color:var(--mischief-gothic-bronze)}
