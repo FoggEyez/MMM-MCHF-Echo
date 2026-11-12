@@ -76,7 +76,7 @@ The same literal defaults are available in ordinary `config.js` and in compatibl
 | `layout` | `"auto"` | `auto`, `plaque`, `sleeve`, `showcase`. |
 | `surface` | `"floating"` | Transparent, unframed mirror presentation. Choose `framed` for the original enclosing card. |
 | `showBrand` | `false` | Show the small Echo/Mischief labels. Spotify attribution always remains visible. |
-| `glow` | `true` | Soft ambient light while playback is fresh and playing; fades away on pause, idle, disconnection or stale data. |
+| `glow` | `true` | Soft ambient light during fresh playing or paused playback. Paused light stays steady; stale/disconnected playback fades the light and album cover over 1.8 seconds. |
 | `glowSource` | `"artwork"` | Use the existing OnSpotify artwork palette when available; otherwise use `glowColor`. `custom` always uses your chosen color. |
 | `glowStrength` | `55` | Glow intensity, 0–100. |
 | `glowColor` | `"#b89a60"` | Six-digit hex color for a custom glow or palette fallback. |

@@ -17,10 +17,13 @@
 .mchf-echo[data-surface=floating] .echo-art-frame{background:transparent;border:0;border-radius:0;box-shadow:none;padding:0}
 .mchf-echo[data-brand=false] .echo-brand,.mchf-echo[data-brand=false] .echo-maker{display:none}
 .mchf-echo{isolation:isolate}
-.echo-aura{position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(ellipse closest-side at 50% 43%,var(--echo-glow-color,#b89a60) 0%,transparent 100%);opacity:0;transition:opacity 1.2s ease-out}
+/* The outer layer owns the fade; the inner light freezes its pulse on pause. */
+.echo-aura{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity 1.8s ease-out}
+.echo-aura-light{position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse closest-side at 50% 43%,var(--echo-glow-color,#b89a60) 0%,transparent 100%);animation:echo-aura-breathe 9s ease-in-out infinite;animation-play-state:paused}
 .mchf-echo[data-glowing=true] .echo-aura{opacity:var(--echo-glow-strength,.55)}
-.mchf-echo[data-glowing=true][data-animating=true] .echo-aura{animation:echo-aura-breathe 9s ease-in-out infinite}
-@keyframes echo-aura-breathe{0%,100%{opacity:calc(var(--echo-glow-strength,.55) * .78)}50%{opacity:var(--echo-glow-strength,.55)}}
-@media(prefers-reduced-motion:reduce){.echo-aura{animation:none!important;transition:none!important}}
-
-.mchf-echo[data-layout=sleeve] .echo-aura{background:radial-gradient(ellipse closest-side at 28% 48%,var(--echo-glow-color,#b89a60) 0%,transparent 100%)}
+.mchf-echo[data-animating=true] .echo-aura-light{animation-play-state:running}
+@keyframes echo-aura-breathe{0%,100%{opacity:.78}50%{opacity:1}}
+.mchf-echo[data-layout=sleeve] .echo-aura-light{background:radial-gradient(ellipse closest-side at 28% 48%,var(--echo-glow-color,#b89a60) 0%,transparent 100%)}
+.echo-art-frame{opacity:1;transition:opacity 1.8s ease-out}
+.mchf-echo:is([data-state=stale],[data-state=unavailable],[data-state=reconnect],[data-state=limited]) .echo-art-frame{opacity:0}
+@media(prefers-reduced-motion:reduce){.echo-aura-light{animation:none!important}.echo-aura,.echo-art-frame{transition:none!important}}
