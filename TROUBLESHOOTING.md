@@ -11,3 +11,5 @@
 - **A paused track remains visible:** This is the `retain` behavior. Choose `collapse`, `plaque`, or `hide` for a quieter empty state. Data never continues moving while paused.
 
 For the OnSpotify bridge, keep the provider enabled at a normal position. Add the `mchf-echo-source-only` class to hide only its card. A provider with no position may not be loaded by MagicMirror.
+
+The default surface is now floating. Choose `surface: "framed"` for a panel and earthy background. The ambient glow appears only with fresh playing data; pause, idle, stale data, suspension and hidden pages fade it away. `glowSource: "artwork"` uses OnSpotify’s published palette when available; choose `custom` and a six-digit hex `glowColor` for a fixed color.

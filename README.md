@@ -1,6 +1,6 @@
 # Echo · Mirror Mischief
 
-**MCHF = Mischief.** Echo is a responsive music card for MagicMirror²: original artwork, an engraved observatory frame, restrained track transitions and a small arc showing real playback progress.
+**MCHF = Mischief.** Echo is a responsive music card for MagicMirror²: original artwork, a floating observatory presentation, restrained track transitions and a small arc showing real playback progress.
 
 Part of [Mirror Mischief](https://github.com/FoggEyez/Mirror-Mischief). Meaning: sound that leaves an impression. Requires MagicMirror² 2.38+ and Node 22+. It displays playback; it does not play or capture audio.
 
@@ -74,10 +74,16 @@ The same literal defaults are available in ordinary `config.js` and in compatibl
 | `source` | `"notification"` | `notification`, `onspotify`, or independent `spotify` connection. |
 | `notificationName` | `"MCHF_ECHO_PLAYBACK"` | Notification listened to in notification mode. |
 | `layout` | `"auto"` | `auto`, `plaque`, `sleeve`, `showcase`. |
+| `surface` | `"floating"` | Transparent, unframed mirror presentation. Choose `framed` for the original enclosing card. |
+| `showBrand` | `false` | Show the small Echo/Mischief labels. Spotify attribution always remains visible. |
+| `glow` | `true` | Soft ambient light while playback is fresh and playing; fades away on pause, idle, disconnection or stale data. |
+| `glowSource` | `"artwork"` | Use the existing OnSpotify artwork palette when available; otherwise use `glowColor`. `custom` always uses your chosen color. |
+| `glowStrength` | `55` | Glow intensity, 0–100. |
+| `glowColor` | `"#b89a60"` | Six-digit hex color for a custom glow or palette fallback. |
 | `preset` | `"observatory"` | `observatory`, `earthen`, `glass`. |
 | `background` | `"original"` | `original`, `moss`, `sage`, `clay`, `sand`, `walnut`, `slate`, `peat`. |
-| `panelWidth` | `350` | Initial card width in pixels. |
-| `panelHeight` | `300` | Initial card height in pixels. |
+| `panelWidth` | `350` | Initial module width in pixels. |
+| `panelHeight` | `300` | Initial module height in pixels. |
 | `showProgress` | `true` | Display the informational elapsed-time arc outside the artwork. |
 | `showRemaining` | `true` | Show remaining time next to elapsed time. |
 | `showAlbum` | `true` | Show original artwork where the layout has room. |
@@ -135,3 +141,5 @@ Update with `git pull` and `npm ci --ignore-scripts`, then restart MagicMirror. 
 ## Verification and compatibility
 
 `npm test` exercises metadata sanitization, real/paused/stale progress, seeking, responsive face choices, serialized OAuth refresh, token expiry, rate-limit backoff, upstream-object freshness and lifecycle cleanup. API tests use fake responses and make no network requests. Artwork and Spotify API behavior depend on the account's supported content and permissions. The bridge specifically targets MMM-OnSpotify 7.0.2. Working-render screenshots use synthetic metadata; they do not establish every hardware/account combination as tested.
+
+Floating surfaces have no enclosing panel or artwork surround. Earthy background colors apply when you choose `surface: "framed"`. The glow is a separate colored light layer: original album artwork stays intact and is never blurred or recolored. Palette reuse reads CSS colors already published by OnSpotify; it adds no image processing or API requests. Reduced motion keeps the light steady.
