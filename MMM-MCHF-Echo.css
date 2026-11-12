@@ -27,3 +27,6 @@
 .echo-art-frame{opacity:1;transition:opacity 1.8s ease-out}
 .mchf-echo:is([data-state=stale],[data-state=unavailable],[data-state=reconnect],[data-state=limited]) .echo-art-frame{opacity:0}
 @media(prefers-reduced-motion:reduce){.echo-aura-light{animation:none!important}.echo-aura,.echo-art-frame{transition:none!important}}
+
+/* A floating surface also overrides any older companion wrapper frame. */
+.module.MMM-MCHF-Echo:has(.mchf-echo[data-surface=floating])>.module-content{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
