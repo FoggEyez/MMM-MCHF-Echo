@@ -4,7 +4,7 @@
 
 Part of [Mirror Mischief](https://github.com/FoggEyez/Mirror-Mischief). Meaning: sound that leaves an impression. Requires MagicMirror² 2.38+ and Node 22+. It displays playback; it does not play or capture audio.
 
-![Echo working-render preview](preview/Echo.png)
+![Echo working-render preview](preview/Echo.jpg)
 
 ## Install
 
