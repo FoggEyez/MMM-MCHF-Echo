@@ -1,3 +1,5 @@
 # Echo validation
 
 Owner trial 2026-11-11: the actual frontend was checked in Preview Studio and on the owner’s existing Raspberry Pi MagicMirror display. The browser check covered normal and compact layouts without overflow, shared style controls, and lifecycle-safe preview timers. Echo additionally displayed fresh real track changes, original album artwork and progress through the existing OnSpotify connection. Public screenshots contain fictional sample playback and project-owned mascot artwork. Independent direct Spotify authorization remains unverified with a live account; its HTTP behavior is tested with controlled responses.
+
+Version 0.1.1 polish: floating surfaces and the optional framed style were inspected in the browser without overflow. The owner’s Pi display showed the new transparent presentation. Echo’s playing glow and paused fade-to-zero were verified with sample playback, with separate color/strength controls; the physical display was idle at the final check, so no additional live playback was started for testing.
