@@ -9,3 +9,5 @@
 - **Too cramped:** Start with Plaque 350×110, Sleeve 500×240, or Showcase 350×450. Select `auto` to let the arrangement change with dimensions. Reduced-motion mode disables decorative motion and transitions.
 - **Rate limited:** Echo honors Spotify's `Retry-After`; leave it connected and let the backoff finish. Extra modules polling the same account/application may contribute to limits.
 - **A paused track remains visible:** This is the `retain` behavior. Choose `collapse`, `plaque`, or `hide` for a quieter empty state. Data never continues moving while paused.
+
+For the OnSpotify bridge, keep the provider enabled at a normal position. Add the `mchf-echo-source-only` class to hide only its card. A provider with no position may not be loaded by MagicMirror.

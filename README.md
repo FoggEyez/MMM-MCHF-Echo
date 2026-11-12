@@ -21,7 +21,7 @@ No runtime packages, build step or companion subscription is required. The repos
 
 ## Easiest setup: reuse MMM-OnSpotify
 
-If [MMM-OnSpotify](https://github.com/Fabrizz/MMM-OnSpotify) is already connected, add Echo and choose `source: "onspotify"`. Echo reads the existing module's frontend playback metadata. It does not copy credentials, request new Spotify permissions, or make a second set of Spotify API requests. Leave the provider enabled. To show only Echo, omit the provider's `position` while preserving its existing configuration. Do not set the provider `disabled: true`.
+If [MMM-OnSpotify](https://github.com/Fabrizz/MMM-OnSpotify) is already connected, add Echo and choose `source: "onspotify"`. Echo reads the existing module's frontend playback metadata. It does not copy credentials, request new Spotify permissions, or make a second set of Spotify API requests. Leave the provider enabled. To show only Echo, keep the provider’s normal `position` and add `mchf-echo-source-only` to its existing `classes` string. Echo’s stylesheet hides that card while keeping the provider loaded. Removing its position can prevent MagicMirror from loading the provider. Do not set the provider `disabled: true`.
 
 ```js
 {

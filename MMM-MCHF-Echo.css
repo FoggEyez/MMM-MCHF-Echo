@@ -6,3 +6,6 @@
 .mchf-echo[data-state=stale] .echo-state,.mchf-echo[data-state=reconnect] .echo-state,.mchf-echo[data-state=unavailable] .echo-state{color:#d2b89a}.mchf-echo[data-state=paused] .echo-gauge-arc,.mchf-echo[data-state=idle] .echo-gauge-arc{opacity:.55}.mchf-echo[data-animating=true] .echo-brand{animation:echo-brass-breathe 8s ease-in-out infinite}@keyframes echo-brass-breathe{0%,100%{color:var(--echo-brass)}50%{color:var(--echo-ink)}}@media(prefers-reduced-motion:reduce){.mchf-echo *{animation:none!important;transition:none!important}}
 
 .mchf-echo[data-layout=plaque] .echo-body{grid-template-columns:minmax(0,1fr)}.mchf-echo[data-layout=plaque] .echo-art-frame{display:none}.mchf-echo[data-layout=plaque] .echo-details{padding-right:86px}
+
+/* Explicit bridge opt-in: keep the upstream provider loaded, hide only its card. */
+.module.MMM-OnSpotify.mchf-echo-source-only{display:none!important}
